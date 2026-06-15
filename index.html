@@ -1,234 +1,248 @@
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Favorite Human ❤️</title>
+
+<title>For Kuttu ❤️</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
 
 body{
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    min-height:100vh;
-    background:linear-gradient(135deg,#ffd6e8,#fff4d8);
-    overflow-x:hidden;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#ffe4ec,#fff5d9);
+    text-align:center;
+    color:#444;
 }
 
-.container{
-    background:white;
-    max-width:700px;
-    width:100%;
-    border-radius:30px;
-    padding:40px;
-    text-align:center;
-    box-shadow:0 20px 50px rgba(0,0,0,0.1);
-    position:relative;
+.hero{
+    padding:50px 20px;
 }
 
 h1{
     color:#ff5f8f;
-    margin-bottom:15px;
+    font-size:3rem;
 }
 
-.subtitle{
-    color:#666;
-    margin-bottom:30px;
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    padding:20px;
 }
 
-.heart{
-    font-size:60px;
-    animation:pulse 1.5s infinite;
+.gallery img{
+    width:280px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
 
-@keyframes pulse{
-    50%{
-        transform:scale(1.15);
-    }
+.card{
+    background:white;
+    max-width:700px;
+    margin:30px auto;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
 button{
     border:none;
-    padding:14px 25px;
-    border-radius:30px;
     background:#ff5f8f;
     color:white;
-    font-size:16px;
+    padding:14px 25px;
+    border-radius:30px;
     cursor:pointer;
-    margin:10px;
-    transition:0.3s;
+    font-size:16px;
 }
 
 button:hover{
-    transform:translateY(-2px);
+    opacity:0.9;
 }
 
-.card{
+#secret{
     display:none;
-    margin-top:25px;
-    padding:25px;
-    border-radius:20px;
-    background:#fff7fa;
+    margin-top:20px;
+    line-height:1.8;
 }
 
 .reason{
-    font-size:20px;
     margin-top:20px;
-    color:#444;
-}
-
-.floating{
-    position:fixed;
-    font-size:25px;
-    animation:float 8s linear infinite;
-}
-
-@keyframes float{
-    from{
-        transform:translateY(100vh);
-        opacity:1;
-    }
-    to{
-        transform:translateY(-100px);
-        opacity:0;
-    }
+    font-size:20px;
+    min-height:60px;
 }
 
 .counter{
-    margin-top:20px;
-    font-size:18px;
-    color:#555;
+    font-size:22px;
+    margin-top:15px;
+    color:#ff5f8f;
 }
 
-.footer{
-    margin-top:30px;
-    color:#999;
-    font-size:14px;
-}
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="hero">
 
-<div class="heart">❤️</div>
+<h1>For My Kuttu ❤️</h1>
 
-<h1>Hey Beautiful</h1>
-
-<p class="subtitle">
-I heard you're not feeling great today...
-so I made you your own tiny corner of the internet.
+<p>
+A tiny corner of the internet made exclusively for the cutest sick person I know.
 </p>
 
-<button onclick="showSurprise()">
-✨ Open Emergency Happiness Kit
-</button>
+<p>
+(Puttu made this because apparently normal people send flowers.)
+</p>
 
-<div id="surprise" class="card">
-    <h2>Prescription from Dr. Boyfriend 👨‍⚕️❤️</h2>
-
-    <p style="margin-top:15px;">
-        Take:
-    </p>
-
-    <p style="margin-top:15px;">
-        🌸 3 warm hugs<br>
-        🌸 2 naps<br>
-        🌸 Lots of water<br>
-        🌸 Unlimited boyfriend affection
-    </p>
-
-    <div class="counter">
-        ❤️ Happiness Level: <span id="happy">0</span>%
-    </div>
-
-    <button onclick="increaseHappy()">
-        Boost Happiness
-    </button>
-
-    <div class="reason" id="reason"></div>
 </div>
 
-<div class="footer">
-Made with love by Sachit ❤️
+<div class="gallery">
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+
+</div>
+
+<div class="card">
+
+<h2>❤️ 1 Year & 5 Months With My Kuttu ❤️</h2>
+
+<p>
+Today marks 1 year and 5 months with you.
+And somehow, even after all this time,
+we still manage to say the exact same thing at the exact same time.
+</p>
+
+<p>
+Honestly, at this point it's getting suspicious.
+</p>
+
+<div class="counter">
+Kuttu Happiness Meter: <span id="meter">0</span>%
+</div>
+
+<button onclick="increaseLove()">
+Boost Happiness
+</button>
+
+<div class="reason" id="reason"></div>
+
+</div>
+
+<div class="card">
+
+<h2>🔒 Secret Letter</h2>
+
+<button onclick="showLetter()">
+Open Only If You're Kuttu
+</button>
+
+<div id="secret">
+
+<p>
+Dear Kuttu,
+</p>
+
+<p>
+No matter how much masti I do...
+No matter how much I tang karu...
+No matter how many times I annoy you for absolutely no reason...
+</p>
+
+<p>
+I hope you always know one thing:
+</p>
+
+<h2>
+I will always love my Kuttu ❤️
+</h2>
+
+<p>
+And yes...
+</p>
+
+<p>
+Whenever you miss something,
+or whenever I miss something,
+I know exactly what's coming:
+</p>
+
+<p>
+"Masti me ki bass kya ab 1 year ho gaya hai naa,
+sab samajh gaya mai."
+</p>
+
+<p>
+And somehow that joke still makes me laugh every single time.
+</p>
+
+<p>
+Thank you for every memory,
+every laugh,
+every random conversation,
+every synchronized sentence,
+and every moment where life feels a little better because you're in it.
+</p>
+
+<p>
+Now your only job is:
+GET WELL SOON ❤️
+</p>
+
+<p>
+Love,<br>
+Your Puttu
+</p>
+
 </div>
 
 </div>
 
 <script>
 
-const reasons = [
-"Your smile makes bad days better.",
-"You're my favourite notification.",
-"You're cute even when you're sick.",
-"You're stronger than you think.",
-"You make ordinary days special.",
-"You're the best thing that's happened to me.",
-"You're ridiculously lovable.",
-"You're my favourite person."
+const messages = [
+"Because you're my favourite person.",
+"Because you're prettier than you think.",
+"Because you make me laugh every day.",
+"Because saying the same thing at the same time never gets old.",
+"Because every memory is better with you in it.",
+"Because Puttu loves Kuttu ❤️",
+"Because even when you're sick, you're still cute.",
+"Because I got lucky."
 ];
 
 let count = 0;
 let happiness = 0;
 
-function showSurprise(){
-    document.getElementById("surprise").style.display="block";
-    createHearts();
-}
+function increaseLove(){
 
-function increaseHappy(){
-
-    if(happiness < 100){
-        happiness += 14;
-    }
+    happiness += 15;
 
     if(happiness > 100){
         happiness = 100;
     }
 
-    document.getElementById("happy").innerText = happiness;
+    document.getElementById("meter").innerText = happiness;
 
     document.getElementById("reason").innerText =
-        reasons[count % reasons.length];
+    messages[count % messages.length];
 
     count++;
 }
 
-function createHearts(){
-
-    setInterval(() => {
-
-        const heart = document.createElement("div");
-
-        heart.className = "floating";
-
-        heart.innerHTML =
-            Math.random() > 0.5 ? "❤️" : "🌸";
-
-        heart.style.left =
-            Math.random()*100 + "vw";
-
-        document.body.appendChild(heart);
-
-        setTimeout(() => {
-            heart.remove();
-        },8000);
-
-    },500);
+function showLetter(){
+    document.getElementById("secret").style.display="block";
 }
 
 </script>
 
 </body>
+
 </html>
 ```
