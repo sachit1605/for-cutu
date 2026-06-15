@@ -1,0 +1,234 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Favorite Human ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height:100vh;
+    background:linear-gradient(135deg,#ffd6e8,#fff4d8);
+    overflow-x:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    background:white;
+    max-width:700px;
+    width:100%;
+    border-radius:30px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 20px 50px rgba(0,0,0,0.1);
+    position:relative;
+}
+
+h1{
+    color:#ff5f8f;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    color:#666;
+    margin-bottom:30px;
+}
+
+.heart{
+    font-size:60px;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    50%{
+        transform:scale(1.15);
+    }
+}
+
+button{
+    border:none;
+    padding:14px 25px;
+    border-radius:30px;
+    background:#ff5f8f;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    margin:10px;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+.card{
+    display:none;
+    margin-top:25px;
+    padding:25px;
+    border-radius:20px;
+    background:#fff7fa;
+}
+
+.reason{
+    font-size:20px;
+    margin-top:20px;
+    color:#444;
+}
+
+.floating{
+    position:fixed;
+    font-size:25px;
+    animation:float 8s linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+
+.counter{
+    margin-top:20px;
+    font-size:18px;
+    color:#555;
+}
+
+.footer{
+    margin-top:30px;
+    color:#999;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="heart">❤️</div>
+
+<h1>Hey Beautiful</h1>
+
+<p class="subtitle">
+I heard you're not feeling great today...
+so I made you your own tiny corner of the internet.
+</p>
+
+<button onclick="showSurprise()">
+✨ Open Emergency Happiness Kit
+</button>
+
+<div id="surprise" class="card">
+    <h2>Prescription from Dr. Boyfriend 👨‍⚕️❤️</h2>
+
+    <p style="margin-top:15px;">
+        Take:
+    </p>
+
+    <p style="margin-top:15px;">
+        🌸 3 warm hugs<br>
+        🌸 2 naps<br>
+        🌸 Lots of water<br>
+        🌸 Unlimited boyfriend affection
+    </p>
+
+    <div class="counter">
+        ❤️ Happiness Level: <span id="happy">0</span>%
+    </div>
+
+    <button onclick="increaseHappy()">
+        Boost Happiness
+    </button>
+
+    <div class="reason" id="reason"></div>
+</div>
+
+<div class="footer">
+Made with love by Sachit ❤️
+</div>
+
+</div>
+
+<script>
+
+const reasons = [
+"Your smile makes bad days better.",
+"You're my favourite notification.",
+"You're cute even when you're sick.",
+"You're stronger than you think.",
+"You make ordinary days special.",
+"You're the best thing that's happened to me.",
+"You're ridiculously lovable.",
+"You're my favourite person."
+];
+
+let count = 0;
+let happiness = 0;
+
+function showSurprise(){
+    document.getElementById("surprise").style.display="block";
+    createHearts();
+}
+
+function increaseHappy(){
+
+    if(happiness < 100){
+        happiness += 14;
+    }
+
+    if(happiness > 100){
+        happiness = 100;
+    }
+
+    document.getElementById("happy").innerText = happiness;
+
+    document.getElementById("reason").innerText =
+        reasons[count % reasons.length];
+
+    count++;
+}
+
+function createHearts(){
+
+    setInterval(() => {
+
+        const heart = document.createElement("div");
+
+        heart.className = "floating";
+
+        heart.innerHTML =
+            Math.random() > 0.5 ? "❤️" : "🌸";
+
+        heart.style.left =
+            Math.random()*100 + "vw";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        },8000);
+
+    },500);
+}
+
+</script>
+
+</body>
+</html>
+```
