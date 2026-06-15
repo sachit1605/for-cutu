@@ -3,126 +3,248 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Kuttu ❤️</title>
+<title>Kuttu Recovery Portal ❤️</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
 font-family:Arial,sans-serif;
-background:linear-gradient(180deg,#0f172a,#1e293b,#0f172a);
-color:white;overflow-x:hidden
+background:linear-gradient(180deg,#fff7f1,#ffe4ef);
+color:#5b4450;
+overflow-x:hidden;
 }
 .hero{
-min-height:100vh;display:flex;flex-direction:column;
-justify-content:center;align-items:center;text-align:center;
-padding:20px;background:linear-gradient(rgba(15,23,42,.65),rgba(15,23,42,.9)),url('IMG_4777.jpg');
-background-size:cover;background-position:center;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
-.hero h1{font-size:4rem;color:#ff7ab8}
-.hero p{max-width:700px;line-height:1.8;margin-top:20px}
-.section{max-width:1200px;margin:auto;padding:70px 20px}
+.hero h1{font-size:3.5rem;color:#ff5fa2}
+.hero p{max-width:700px;line-height:1.8;font-size:1.1rem}
+.btn{
+background:#ff6ea8;color:white;border:none;
+padding:15px 28px;border-radius:999px;
+cursor:pointer;margin-top:20px;font-size:16px;
+}
+.section{max-width:1100px;margin:auto;padding:60px 20px}
 .card{
-background:rgba(255,255,255,.06);
-border:1px solid rgba(255,255,255,.1);
-border-radius:25px;padding:30px;margin-bottom:30px
+background:white;
+border-radius:25px;
+padding:25px;
+margin-bottom:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
+h2{color:#ff5fa2;margin-bottom:15px}
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:18px;
 }
-.gallery img{
-width:100%;height:350px;object-fit:cover;border-radius:20px
+.photo-card img{
+width:100%;height:320px;object-fit:cover;border-radius:20px;
 }
-h2{color:#ff7ab8;margin-bottom:20px;text-align:center}
-.btn{
-background:#ff5fa2;color:white;border:none;
-padding:15px 25px;border-radius:999px;cursor:pointer
+.caption{text-align:center;margin-top:8px;font-weight:bold}
+.quiz-btn{
+display:block;width:100%;margin:10px 0;
+padding:12px;border:none;border-radius:12px;
+background:#ffe4ef;cursor:pointer;
 }
-#letter{display:none;line-height:2;margin-top:20px}
-footer{text-align:center;padding:40px;color:#bbb}
-.heart{position:fixed;color:#ff6ea8;pointer-events:none;animation:float 8s linear forwards}
+#factBox,#quizResult,#letter{display:none}
+.floating{
+position:fixed;
+pointer-events:none;
+animation:float 10s linear forwards;
+}
 @keyframes float{
 from{transform:translateY(100vh);opacity:1}
 to{transform:translateY(-100px);opacity:0}
 }
+footer{text-align:center;padding:40px}
 </style>
 </head>
 <body>
 
+<div id="floaters"></div>
+
 <section class="hero">
-<h1>For My Kuttu ❤️</h1>
+<h1>🎀 Kuttu Recovery Portal 🎀</h1>
 <p>
-A tiny corner of the internet built by Puttu for the cutest patient in the world.<br><br>
-Happy 1 Year & 5 Months ❤️<br>
-And somehow we still keep saying the exact same thing at the exact same time.
+Built by Puttu for ❤️ Kuttu ❤️<br><br>
+Aka Pyaaru Pyaaru Baby, Meri Shona, Meri Jaan.
+<br><br>
+Warning: This website contains excessive love, dangerous amounts of masti, pizza references, and one extremely lucky boyfriend.
 </p>
+<a href="#start"><button class="btn">Enter Kuttu World ✨</button></a>
 </section>
 
-<section class="section">
+<div class="section" id="start">
+
+<div class="card">
+<h2>🤒 Official Kuttu Medical Report</h2>
+<p>
+Patient Name: Kanika (Kuttu)<br>
+Symptoms: Excessive cuteness, missing Puttu, pizza cravings, rabokki cravings.<br>
+Doctor's Recommendation:<br><br>
+🍕 1 Fiery Onion Pizza<br>
+🍜 1 Chef James Rabokki<br>
+🤗 Unlimited Hugs<br>
+❤️ Unlimited Puttu
+</p>
+</div>
 
 <div class="card">
 <h2>📸 Our Memories</h2>
 <div class="gallery">
-<img src="IMG_3572.jpg">
+
+<div class="photo-card">
+<img src="IMG_3752.jpg">
+<div class="caption">📸 Puttu's Favourite Human</div>
+</div>
+
+<div class="photo-card">
 <img src="IMG_4509.jpg">
+<div class="caption">🌸 Pyaaru Pyaaru Baby Spotted</div>
+</div>
+
+<div class="photo-card">
 <img src="IMG_4777.jpg">
+<div class="caption">❤️ Meri Jaan Being Adorable</div>
+</div>
+
+<div class="photo-card">
 <img src="IMG_7011.jpg">
+<div class="caption">✨ Evidence That Puttu Got Lucky</div>
+</div>
+
 </div>
 </div>
 
 <div class="card">
-<h2>🎭 Puttu & Kuttu Moments</h2>
-<p style="line-height:2">
-"Masti me ki bass kya ab 1 year ho gaya hai naa, sab samajh gaya mai." 😆
-<br><br>
-The mysterious phenomenon where we both say the exact same thing at the exact same time.
-</p>
+<h2>🎮 How Well Do You Know Kuttu?</h2>
+
+<p><b>What is Kuttu's favourite pizza?</b></p>
+<button class="quiz-btn" onclick="correct()">Fiery Onion Pizza 🍕</button>
+<button class="quiz-btn" onclick="wrong()">Margherita</button>
+
+<p><b>What is Kuttu's favourite rabokki?</b></p>
+<button class="quiz-btn" onclick="correct()">Chef James 🍜</button>
+<button class="quiz-btn" onclick="wrong()">Random Place</button>
+
+<p><b>What does Kuttu love most?</b></p>
+<button class="quiz-btn" onclick="allThree()">Pizza</button>
+<button class="quiz-btn" onclick="allThree()">Rabokki</button>
+<button class="quiz-btn" onclick="allThree()">Puttu's Head 🧠❤️</button>
+
+<div id="quizResult" style="margin-top:15px;font-weight:bold"></div>
 </div>
 
 <div class="card">
-<h2>💌 Letter From Puttu</h2>
-<div style="text-align:center">
-<button class="btn" onclick="showLetter()">Open Letter ❤️</button>
+<h2>✨ Emergency Happiness Generator</h2>
+<button class="btn" onclick="fact()">Give Me Happiness</button>
+<p id="factBox" style="margin-top:20px;font-size:18px"></p>
 </div>
+
+<div class="card">
+<h2>💌 Secret Letter From Puttu</h2>
+<button class="btn" onclick="showLetter()">Open Letter</button>
 
 <div id="letter">
+<br>
 <p>Dear Kuttu,</p><br>
-<p>
-I know you're not feeling your best right now, so I wanted to make something just for you.
-</p><br>
+
 <p>
 No matter how much masti I do...<br>
 No matter how much I tang karu...<br>
-No matter how many times I annoy you for fun...
+No matter how many times we somehow say the exact same thing at the exact same time...
 </p><br>
-<h2>I will always love my Kuttu ❤️</h2>
+
 <p>
-Thank you for every laugh, every memory, every date, every conversation,
-and every moment that made life better.
+I will always love my Kuttu ❤️
 </p><br>
+
+<p>
+My Pyaaru Pyaaru Baby ❤️<br>
+My Shona ❤️<br>
+My Jaan ❤️
+</p><br>
+
+<p>
+And yes, whenever one of us misses something:
+</p><br>
+
+<p>
+"Masti me ki bass kya ab 1 year ho gaya hai naa, sab samajh gaya mai."
+</p><br>
+
+<p>
+Thank you for every laugh, every memory, every date, every conversation.
+</p><br>
+
 <p>
 Now please get well soon ❤️
 </p><br>
+
 <p>Love,<br>Puttu</p>
 </div>
 </div>
 
-</section>
+</div>
 
-<footer>Made with ❤️ by Puttu for Kuttu</footer>
+<footer>
+🍕 Fiery Onion Pizza + 🍜 Chef James Rabokki + 🧠 Puttu's Head = Kuttu Happiness
+</footer>
 
 <script>
-function showLetter(){
-document.getElementById("letter").style.display="block";
+const msgs=[
+"Puttu misses Kuttu ❤️",
+"Pyaaru Pyaaru Baby detected 🌸",
+"Meri Shona is adorable ❤️",
+"Your Fiery Onion Pizza awaits 🍕",
+"Your Rabokki awaits 🍜",
+"Unlimited hugs available 🤗",
+"Your boyfriend thinks you're cute.",
+"Your boyfriend is correct."
+];
+
+function fact(){
+let el=document.getElementById('factBox');
+el.style.display='block';
+el.innerHTML=msgs[Math.floor(Math.random()*msgs.length)];
 }
-setInterval(function(){
-const heart=document.createElement("div");
-heart.className="heart";
-heart.innerHTML="❤️";
-heart.style.left=Math.random()*100+"vw";
-heart.style.fontSize=(20+Math.random()*25)+"px";
-document.body.appendChild(heart);
-setTimeout(()=>heart.remove(),8000);
+
+function showLetter(){
+document.getElementById('letter').style.display='block';
+}
+
+function correct(){
+let q=document.getElementById('quizResult');
+q.style.display='block';
+q.innerHTML='✅ Correct. Puttu has done extensive research.';
+}
+
+function wrong(){
+let q=document.getElementById('quizResult');
+q.style.display='block';
+q.innerHTML='❌ Incorrect. Nice try, Kuttu 😆';
+}
+
+function allThree(){
+let q=document.getElementById('quizResult');
+q.style.display='block';
+q.innerHTML='✅ Trick question. The answer is all three.';
+}
+
+setInterval(()=>{
+const items=['❤️','🌸','🍕','🍜'];
+const d=document.createElement('div');
+d.className='floating';
+d.innerHTML=items[Math.floor(Math.random()*items.length)];
+d.style.left=Math.random()*100+'vw';
+d.style.fontSize=(20+Math.random()*20)+'px';
+document.body.appendChild(d);
+setTimeout(()=>d.remove(),10000);
 },700);
 </script>
 
